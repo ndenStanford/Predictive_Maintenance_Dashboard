@@ -1,0 +1,35 @@
+
+#runtime: python37
+
+#instance_class: F4_1G
+
+#service: dashboard 
+
+#handlers:
+#- url: /images
+#  static_dir: static/images
+#  http_headers:
+#    Access-Control-Allow-Origin: '*'
+
+#entrypoint: gunicorn -b 0.0.0.0:8080 main:server
+
+runtime: python
+env: flex
+entrypoint: gunicorn -b 0.0.0.0:8080 main:server
+service: ecg-classification
+
+runtime_config:
+  python_version: 3
+
+# This sample incurs costs to run on the App Engine flexible environment. 
+# The settings below are to reduce costs during testing and are not appropriate
+# for production use. For more information, see:
+# https://cloud.google.com/appengine/docs/flexible/python/configuring-your-app-with-app-yaml
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 4
+  memory_gb: 4
+  disk_size_gb: 12
+
+
