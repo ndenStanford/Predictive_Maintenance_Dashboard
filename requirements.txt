@@ -21,6 +21,6 @@ numpydoc==0.9.1
 matplotlib==3.1.1
 sklearn==0.0
 seaborn==0.9.0
-tensorflow==2.3.0
+tensorflow==2.3.1
 timesynth==0.2.4
 alibi-detect==0.4.0
